@@ -1,0 +1,181 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity $main-transition, visibility $main-transition;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) rotate(0);
+}
+.modal {
+  position: absolute;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-360deg);
+  max-width: 450px;
+  width: 100%;
+  min-height: 609px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: $text-color-dark-theme;
+  transition: transform $main-transition;
+  @include desktop {
+    max-width: 528px;
+    min-height: 581px;
+  }
+}
+
+.modal-closed-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $text-color-dark-theme;
+  cursor: pointer;
+  transition: fill $main-transition;
+  &:hover,
+  &:focus {
+    fill: $cursor-text-color;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.order-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+}
+.modal-field {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  outline: transparent;
+  transition: border $main-transition;
+  &:focus {
+    border: 1px solid rgba(33, 150, 243, 1);
+  }
+}
+
+.modal-input:focus + .input-icon {
+  fill: rgba(33, 150, 243, 1);
+}
+.wrap-input {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill $main-transition;
+}
+
+.modal-lable {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $secondary-text-color;
+}
+
+.modal-text-area {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  resize: none;
+  transition: border $main-transition;
+  &:focus {
+    border: 1px solid rgba(33, 150, 243, 1);
+  }
+}
+
+.coment-margin {
+  margin-bottom: 20px;
+}
+.privacy-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+.privacy-text a {
+  color: rgba(33, 150, 243, 1);
+}
+.check-icon-wrap {
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(33, 33, 33, 1);
+  border-radius: 4px;
+  transition: background-color $main-transition, border $main-transition;
+}
+.check-icon {
+  fill: transparent;
+  transition: fill $main-transition;
+}
+.privacy-input:checked + .privacy-text .check-icon-wrap {
+  background-color: $cursor-text-color;
+  border: 1px solid $cursor-text-color;
+  border-radius: 4px;
+}
+.privacy-input:focus + .privacy-text .check-icon-wrap {
+  border: 1px solid $cursor-text-color;
+}
+.privacy-input:checked + .privacy-text .check-icon {
+  fill: $text-color-dark-theme;
+}
+
+.modal-field-chek {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.btn-form {
+  @extend .btn;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color $main-transition;
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+}

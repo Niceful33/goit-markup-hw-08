@@ -1,0 +1,30 @@
+.our-service {
+  display: none;
+  @include desktop {
+    display: block;
+    padding-bottom: 94px;
+  }
+}
+.service {
+  display: flex;
+  justify-content: space-between;
+}
+.service__thumb {
+  position: relative;
+}
+.service_image-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $text-color-dark-theme;
+}

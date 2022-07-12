@@ -1,0 +1,179 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $main-background-theme;
+}
+.footer__block {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @include desktop {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+.tablet-wrap {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 89px;
+    padding-right: 78px;
+  }
+  @include desktop {
+    justify-content: start;
+    padding: 0;
+    flex-direction: row;
+  }
+}
+.adress-wrap {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+// .adress-menu {
+//   text-align: center;
+//   @include desktop {
+//     text-align: start;
+//   }
+// }
+
+.adress__link {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $text-color-dark-theme;
+  transition: color $main-transition;
+  &:hover,
+  &:focus {
+    color: $cursor-text-color;
+  }
+}
+
+.adress-menu__element {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color $main-transition;
+  &:hover,
+  &:focus {
+    color: $cursor-text-color;
+  }
+}
+
+.adress-menu__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-soc__menu {
+  display: flex;
+  margin-bottom: 60px;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    margin-left: 70px;
+    margin-bottom: 0;
+    align-items: start;
+  }
+}
+
+.networks {
+  display: flex;
+}
+
+.networks__item {
+  margin-left: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.subscribes__footer {
+  display: flex;
+  flex-direction: column;
+  //   align-items: center;
+
+  @include desktop {
+    align-items: start;
+    margin-left: auto;
+  }
+}
+.footer-soc__title {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $text-color-dark-theme;
+}
+.subscribes__form {
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+    width: 100%;
+  }
+
+  @include desktop {
+    display: flex;
+  }
+}
+.subscribes__input {
+  margin-bottom: 20px;
+  padding-left: 16px;
+
+  width: 100%;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  &:focus,
+  &:checked {
+    border: 2px solid $cursor-text-color;
+    outline: none;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    width: 358px;
+  }
+}
+
+.subcribes__btn {
+  @extend .btn;
+  display: flex;
+  margin: 0 auto;
+
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--main-transition);
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+  @include desktop {
+    margin-left: 12px;
+  }
+}
+
+.subcribes__icon {
+  margin-left: 10px;
+}

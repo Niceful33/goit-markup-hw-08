@@ -1,0 +1,36 @@
+$main-font-family: Roboto, sans-serif;
+$main-text-color: #212121;
+$secondary-text-color: #757575;
+$cursor-text-color: #2196f3;
+$text-color-dark-theme: #ffffff;
+$main-background-theme: #2f303a;
+$secondary-background-theme: #f5f4fa;
+$btn-text-color: #212121;
+$active-text-color: #2196f3;
+$employees-color-link: #afb1b8;
+$button-hover-color: #188ce8;
+$section-pading-size: 94px;
+$main-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$mobile-pading-section: 64px;
+$tablet-pading-section: 60px;
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+
+body {
+  // font-family: var(--main-font-family);
+  font-family: $main-font-family;
+  color: var(--main-text-color);
+}
+.section {
+  padding-top: $mobile-pading-section;
+  padding-bottom: $mobile-pading-section;
+  @media screen and (min-width: $tablet) {
+    padding-top: $tablet-pading-section;
+    padding-bottom: $tablet-pading-section;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: $section-pading-size;
+    padding-bottom: $section-pading-size;
+  }
+}

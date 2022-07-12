@@ -1,0 +1,28 @@
+.soc-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.soc-list__link--team {
+  @extend .soc-list__link;
+  fill: $employees-color-link;
+  transition: color $main-transition, background-color $main-transition;
+  &:hover,
+  &:focus {
+    fill: $text-color-dark-theme;
+    background-color: $cursor-text-color;
+  }
+}
+.soc-list__link--footer {
+  @extend .soc-list__link;
+  fill: $text-color-dark-theme;
+  transition: background-color $main-transition;
+  &:hover,
+  &:focus {
+    background-color: $cursor-text-color;
+  }
+}

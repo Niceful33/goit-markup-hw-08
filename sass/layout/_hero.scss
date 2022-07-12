@@ -1,0 +1,72 @@
+.hero {
+  background-color: $main-background-theme;
+  padding: 118px 0;
+  max-width: 480px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/mobile/hero-bk-mob-1x.jpg);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/mobile/hero-bk-mob-2x.jpg);
+  }
+
+  @include tablet {
+    padding: 118px 0;
+    max-width: 768px;
+    height: 400px;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/tablet/hero-bk-tab-1x.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/tablet/hero-bk-tab-2x.jpg);
+    }
+  }
+
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/desktop/hero-bk.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/desktop/hero-bk-des-2x.jpg);
+    }
+  }
+}
+.hero__title {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $text-color-dark-theme;
+  @include desktop {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+.hero__btn {
+  display: block;
+  margin: 0 auto;
+  transition: background-color $main-transition, box-shadow $main-transition;
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+    box-shadow: rgba(0, 0, 0, 0.15);
+  }
+}
