@@ -216,7 +216,7 @@
   line-height: 1.18px;
   letter-spacing: 0.02em;
   color: $cursor-text-color;
-  transition: $main-transition;
+  transition: color $main-transition;
   &:hover,
   &:focus {
     color: $cursor-text-color;
@@ -231,7 +231,7 @@
   line-height: 28px;
   letter-spacing: 0.02em;
   color: $secondary-text-color;
-  transition: $main-transition;
+  transition: color $main-transition;
   &:hover,
   &:focus {
     color: $cursor-text-color;
