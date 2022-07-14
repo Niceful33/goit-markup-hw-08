@@ -85,14 +85,32 @@
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14px;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: $secondary-text-color;
   transition: color $main-transition;
   &:hover,
   &:focus {
     color: $cursor-text-color;
+  }
+  @include desktop {
+    // padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14px;
+  }
+}
+.contacts__link--mail {
+  @include tablet {
+    padding-top: 20px;
+  }
+  @include desktop {
+    padding: 32px 0;
+  }
+}
+.contacts__link--tel {
+  @include tablet {
+    padding-bottom: 20px;
   }
   @include desktop {
     padding: 32px 0;
@@ -108,6 +126,11 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: fill $main-transition;
+  &:hover,
+  &:focus {
+    fill: $cursor-text-color;
+  }
   @include tablet {
     display: none;
   }
@@ -126,10 +149,12 @@
   height: 100vh;
   z-index: 2;
   overflow-y: auto;
-  padding: 10px 15px 48px 40px;
+  // padding: 10px 15px 48px 40px;
+  padding: 40px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  transition: opacity $main-transition, visibility $main-transition;
   @include tablet {
     display: none;
   }
@@ -144,6 +169,11 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: fill $main-transition;
+  &:hover,
+  &:focus {
+    fill: $cursor-text-color;
+  }
 }
 .close-btn__icon:hover,
 .close-btn__icon:focus {
@@ -163,6 +193,11 @@
   line-height: 1.75;
   letter-spacing: 0.02em;
   color: inherit;
+  transition: color $main-transition;
+  &:hover,
+  &:focus {
+    color: $cursor-text-color;
+  }
 }
 .mob-menu__link--active {
   color: $cursor-text-color;
@@ -181,6 +216,11 @@
   line-height: 1.18px;
   letter-spacing: 0.02em;
   color: $cursor-text-color;
+  transition: $main-transition;
+  &:hover,
+  &:focus {
+    color: $cursor-text-color;
+  }
   @include mobile {
     font-size: 34px;
   }
@@ -191,30 +231,35 @@
   line-height: 28px;
   letter-spacing: 0.02em;
   color: $secondary-text-color;
+  transition: $main-transition;
+  &:hover,
+  &:focus {
+    color: $cursor-text-color;
+  }
 }
 .mob-social__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-social__item:not(:first-child) {
-  margin-left: 10px;
-}
-.mob-social__item:not(:last-child):after {
-  content: '';
+  margin-left: 20px;
+  padding-left: 10px;
   border-left: 1px solid rgba(33, 33, 33, 0.2);
-  margin-left: 10px;
-  color: rgba(33, 33, 33, 0.2);
 }
 
 .mob-social__link {
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.22;
   padding: 10px 0;
 
   font-weight: 500;
   letter-spacing: 0.02em;
   color: $cursor-text-color;
-  @include mobile {
-    font-size: 18px;
+
+  transition: color $main-transition;
+  &:hover,
+  &:focus {
+    color: $cursor-text-color;
   }
 }
