@@ -128,7 +128,6 @@
 }
 .privacy-text {
   display: flex;
-  // display: inline-block;
   justify-content: center;
   align-items: center;
   font-size: 12px;
@@ -140,9 +139,7 @@
     line-height: 1.71;
   }
 }
-.privacy-text {
-  flex-wrap: wrap;
-}
+
 .privacy-text a {
   color: rgba(33, 150, 243, 1);
 }
@@ -176,6 +173,7 @@
 .modal-field-chek {
   margin-top: 0;
   margin-bottom: 20px;
+  display: inline-block;
 }
 .btn-form {
   @extend .btn;

@@ -452,8 +452,11 @@ img {
   flex-wrap: wrap;
 }
 
+.mob-social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
 .mob-social__item:not(:first-child) {
-  margin-left: 20px;
   padding-left: 10px;
   border-left: 1px solid rgba(33, 33, 33, 0.2);
 }
@@ -683,7 +686,7 @@ img {
 .team__positon {
   margin-bottom: 16px;
   font-size: 16px;
-  line-height: 0.84;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
@@ -762,12 +765,14 @@ img {
   }
 }
 
+.tablet-wrap {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 768px) {
   .tablet-wrap {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 60px;
     padding-left: 89px;
     padding-right: 78px;
   }
@@ -833,7 +838,6 @@ img {
 
 .footer-soc__menu {
   display: flex;
-  margin-bottom: 60px;
   flex-direction: column;
   align-items: center;
 }
@@ -845,7 +849,6 @@ img {
 @media screen and (min-width: 1200px) {
   .footer-soc__menu {
     margin-left: 70px;
-    margin-bottom: 0;
     align-items: start;
   }
 }
@@ -1243,10 +1246,6 @@ img {
   }
 }
 
-.privacy-text {
-  flex-wrap: wrap;
-}
-
 .privacy-text a {
   color: rgb(33, 150, 243);
 }
@@ -1285,6 +1284,7 @@ img {
 .modal-field-chek {
   margin-top: 0;
   margin-bottom: 20px;
+  display: inline-block;
 }
 
 .btn-form {
